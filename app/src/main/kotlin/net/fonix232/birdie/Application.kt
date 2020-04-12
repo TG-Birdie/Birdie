@@ -1,24 +1,32 @@
+/*
+ * This file is part of Birdie (https://github.com/TG-Birdie/Birdie/)
+ * Copyright (c) 2020 Jozsef Kiraly <fonix232@gmail.com>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, version 3.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package net.fonix232.birdie
 
 import io.ktor.application.Application
 import io.ktor.application.install
-import io.ktor.auth.*
-import io.ktor.features.*
+import io.ktor.features.ContentNegotiation
+import io.ktor.features.DataConversion
+import io.ktor.features.DefaultHeaders
 import io.ktor.gson.gson
-import io.ktor.http.*
-import io.ktor.http.content.CachingOptions
-import io.ktor.locations.Locations
-import io.ktor.request.path
 import io.ktor.routing.routing
-import io.ktor.server.engine.ShutDownUrl
-import io.ktor.sessions.Sessions
-import io.ktor.sessions.cookie
-import io.ktor.util.date.GMTDate
 import net.fonix232.birdie.di.appModule
 import net.fonix232.birdie.features.*
-import net.fonix232.birdie.models.Session
 import org.koin.ktor.ext.Koin
-import org.slf4j.event.Level
 
 @Suppress("unused") // Referenced in application.conf
 @kotlin.jvm.JvmOverloads

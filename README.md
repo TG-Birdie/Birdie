@@ -16,17 +16,17 @@ Features
 Usage
 -----
 
-Deploying Birdie (once it is ready to be used) is quite simple using the supplied [Dockerfile](./Dockerfile) 
+Deploying Birdie (once it is ready to be used) is quite simple using the supplied [Dockerfile](./Dockerfile)
 and [docker-compose](./docker-compose.yml) configurations.
 
-By default, Birdie will use an in-memory, volatile database. To have it regularly backed up, make sure to 
+By default, Birdie will use an in-memory, volatile database. To have it regularly backed up, make sure to
 attach the `/config` volume - it will store your configuration files, as well as the database and plugins.
 
 
 Plugin Interface
 ----------------
 
-Plugins are loaded using the [PF4J](https://pf4j.org/) framework. All plugins must use the architecture 
+Plugins are loaded using the [PF4J](https://pf4j.org/) framework. All plugins must use the architecture
 provided in [the sample plugin](./plugins/sample) to ensure compatibility.
 
 Plugins can be enabled/disabled/configured from the web interface.
